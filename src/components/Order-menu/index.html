@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../img/component-img/foodDelivery.jpg" sizes="any">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <a href="../../components/Landing/index.html"><img src="../../img/component-img/logo.png" alt="Logo"></a>
+        </div>
+        <ul class="menu">
+            <li><a href="../../components/Landing/index.html">Home</a></li>
+            <li><a href="index.html">Restaurant</a></li>
+            <li><a href="#my-cart">My Cart</a></li>
+            <li><a href="../../components/login/index.html">Login</a></li>
+            <li><a href="../../components/Sign-in/index.html">SignUp</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="step-section">
+        <div>
+            <img src="../../img/useless/1.png" alt="Choose a restaurant">
+            <span>Choose a restaurant</span>
+        </div>
+        <div>
+            <img src="../../img/activeUseless/2.png" alt="Choose a tasty food">
+            <span>Choose a tasty food</span>
+        </div>
+        <div>
+            <img src="../../img/useless/3.png" alt="Delivery">
+            <span>Delivery</span>
+        </div>
+    </div>
+    <hr>
+    <section class="restaurant-container">
+        <div class="restaurant-item">
+            <img src="../../img/restaurant-img/byayian.jpg" alt="Restaurant 1">
+            <div class="restaurant-info">
+                <h3>Byanjan</h3>
+                <p>Lakeside, Pokhara</p>
+                <h5>✔ Min️: Rs. 299 &nbsp;🛵: 30 mins &nbsp; <span style="color: red;">★★★★☆</span></h5>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="food-menu">
+        <h1><u>Food Menu</u></h1>
+        <div class="menu-items">
+            <!-- Repeat this block for each menu item -->
+            <div class="menu-item" data-name="Thali" data-price="850">
+                <img src="../../img/special-img/thali.jpg" alt="Thali">
+                <h3>Thali</h3>
+                <p>Rs. 850</p>
+                <div class="quantity-controls">
+                    <button class="minus-btn">-</button>
+                    <span class="quantity">0</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="menu-item" data-name="Burger" data-price="200">
+                <img src="../../img/special-img/fastfood.jpg" alt="Burger">
+                <h3>Burger</h3>
+                <p>Rs. 200</p>
+                <div class="quantity-controls">
+                    <button class="minus-btn">-</button>
+                    <span class="quantity">0</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="menu-item" data-name="Donut" data-price="100">
+                <img src="../../img/special-img/desert.jpg" alt="Donut">
+                <h3>Donut</h3>
+                <p>Rs. 100</p>
+                <div class="quantity-controls">
+                    <button class="minus-btn">-</button>
+                    <span class="quantity">0</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <section class="cart-summary" id="my-cart">
+        <h2><u>My Cart</u></h2>
+        <ul class="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </ul>
+        <div class="totals">
+            <p>Subtotal: <span>Rs. </span><span id="subtotal">0</span></p>
+            <p>Delivery: <span>Rs. </span><span id="delivery">100</span></p>
+            <p>Total: <span>Rs. </span><span id="total">100</span></p>
+        </div>
+    </section>
+    <div class="footer-content-white">
+        <div class="contact-info">
+            <h3>Need Help?</h3>
+            <p>📞 +977 9846098780</p>
+            <p>📧 Bhoklagyo@gmail.com</p>
+        </div>
+        <div class="about-info">
+            <h3>About us</h3>
+            <p>Contact us</p>
+            <p>Privacy policy</p>
+        </div>
+    </div>
+    <div class="footer-content-white">
+        <div class="social-links">
+            <p>© Bhok Lagyo</p>
+            <p>Follow us:</p>
+            <span>
+                <img src="../../img/social-icon-img/instagramLogo.jpg" alt="Instagram">
+                <img src="../../img/social-icon-img/facebookLogo.jpg" alt="Facebook">
+            </span>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <p>Powered by: UMA Team</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
