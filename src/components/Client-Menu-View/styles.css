@@ -1,3 +1,4 @@
+/* Main container styles */
 * {
     margin: 0;
     padding: 0;
@@ -17,45 +18,21 @@ body {
     background-color: white;
 }
 
-/* Navigation Styles */
-nav {
-    position: fixed;
-    width: 100%;
-    background: #141A26;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000; /* Ensure nav stays on top */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
+button {
+    padding: 10px 20px;
+    background-color: #141A26 ;
     color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    width: fit-content;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a img {
-    margin-right: 10px;
-}
-
-.logo {
-    margin-left: 20px; /* Add some margin to the logo */
+button:hover {
+    background-color:#2E3B4E  ;
 }
 
 .restaurant-container {
@@ -88,7 +65,7 @@ nav ul li a img {
 }
 
 .menu {
-    margin-right: 20px; /* Add some margin to the menu items */
+    margin-right: 20px;
 }
 
 .step-section {
@@ -131,12 +108,19 @@ nav ul li a img {
 }
 
 .menu-item {
+    position: relative;
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 200px;
     text-align: center;
+    transition: transform 0.3s;
+    overflow: hidden; /* Ensure description stays within card */
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
 }
 
 .menu-item img {
@@ -146,6 +130,29 @@ nav ul li a img {
 
 .menu-item p {
     color: #ff7f22;
+}
+
+.menu-item .description {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(100%);
+    top: 0;
+    height: fit-content;
+    border-radius: 10px
+}
+
+.menu-item:hover .description {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .quantity-controls {
@@ -172,11 +179,9 @@ nav ul li a img {
 
 /* Cart Summary Section */
 .cart-summary {
-
     color: #fff;
     padding: 20px;
     height: fit-content;
-    margin: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -211,90 +216,7 @@ nav ul li a img {
 
 .totals span {
     color: white;
-
     display: inline-block;
     min-width: 50px;
-
 }
 
-
-/* Footer Styles */
-footer {
-    background-color: #ff7f22;
-    width: 100%;
-    padding: 0;
-    color: white;
-}
-
-
-footer .footer-content, .footer-content-white {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-}
-
-footer .footer-content img {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 20px;
-}
-
-footer .footer-content h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-footer .footer-content p, .footer-content-white p {
-    margin: 10px 0;
-}
-
-footer .footer-content button {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin: 10px;
-}
-
-footer .footer-content .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-footer .contact-info, footer .about-info {
-    text-align: left;
-    margin: 20px;
-}
-
-footer .bottom-bar {
-    background-color: #333;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    footer .footer-content-white {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    footer .footer-content img {
-        margin-bottom: 0;
-    }
-
-    footer .contact-info, footer .about-info {
-        margin: 0 20px;
-    }
-}
-
-footer .social-links {
-    text-align: center;
-}
-
-.footer-content-white {
-    color: black;
-    background: white;
-    width: 100%;
-}
