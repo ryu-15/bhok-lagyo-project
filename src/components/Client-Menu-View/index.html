@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Menu</title>
+
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../styles/nav-styles.css">
+    <link rel="stylesheet" href="../../styles/footer-styles.css">
     <link rel="icon" href="../../img/component-img/foodDelivery.jpg" sizes="any">
 </head>
 <body>
 <header>
     <nav>
         <div class="logo">
-            <a href="../../components/Landing/index.html"><img src="../../img/component-img/logo.png" alt="Logo"></a>
+            <a href="../../components/login/index.html"><img src="../../img/component-img/logo.png" alt="Logo"></a>
         </div>
-        <ul class="menu">
-            <li><a href="../../components/Landing/index.html">Home</a></li>
-            <li><a href="index.html">Restaurant</a></li>
-            <li><a href="#my-cart">My Cart</a></li>
+        <div class="toggle-button" id="navbar-toggle">&#9776;</div>
+        <ul class="menu" id="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="../Restaurtant-View/index.html">Restaurant</a></li>
+            <li><a href="../Cart/index.html">My Cart</a></li>
             <li><a href="../../components/login/index.html">Login</a></li>
             <li><a href="../../components/Sign-in/index.html">SignUp</a></li>
         </ul>
@@ -52,8 +56,7 @@
     <section class="food-menu">
         <h1><u>Food Menu</u></h1>
         <div class="menu-items">
-            <!-- Repeat this block for each menu item -->
-            <div class="menu-item" data-name="Thali" data-price="850">
+            <div class="menu-item" data-name="Thali" data-price="850" >
                 <img src="../../img/special-img/thali.jpg" alt="Thali">
                 <h3>Thali</h3>
                 <p>Rs. 850</p>
@@ -62,21 +65,24 @@
                     <span class="quantity">0</span>
                     <button class="add-btn">+</button>
                 </div>
+                <div class="description">A traditional meal with various dishes.</div>
             </div>
-            <div class="menu-item" data-name="Burger" data-price="200">
+            <div class="menu-item" data-name="Burger" data-price="200" >
                 <img src="../../img/special-img/fastfood.jpg" alt="Burger">
                 <h3>Burger</h3>
                 <p>Rs. 200</p>
+                <div class="description">A delicious burger with fresh ingredients.</div>
                 <div class="quantity-controls">
                     <button class="minus-btn">-</button>
                     <span class="quantity">0</span>
                     <button class="add-btn">+</button>
                 </div>
             </div>
-            <div class="menu-item" data-name="Donut" data-price="100">
+            <div class="menu-item" data-name="Donut" data-price="100" >
                 <img src="../../img/special-img/desert.jpg" alt="Donut">
                 <h3>Donut</h3>
                 <p>Rs. 100</p>
+                <div class="description">A sweet donut for your dessert cravings.</div>
                 <div class="quantity-controls">
                     <button class="minus-btn">-</button>
                     <span class="quantity">0</span>
@@ -85,10 +91,8 @@
             </div>
         </div>
     </section>
-</main>
-<footer>
-    <section class="cart-summary" id="my-cart">
-        <h2><u>My Cart</u></h2>
+    <section  style="background: #ff7f22; padding: 3%" class="cart-summary" id="my-cart">
+        <h2><u><a href="../Cart/index.html" style="text-decoration: none;color: white">My Cart</a></u></h2>
         <ul class="cart-items">
             <!-- Cart items will be dynamically inserted here -->
         </ul>
@@ -96,8 +100,15 @@
             <p>Subtotal: <span>Rs. </span><span id="subtotal">0</span></p>
             <p>Delivery: <span>Rs. </span><span id="delivery">100</span></p>
             <p>Total: <span>Rs. </span><span id="total">100</span></p>
+            <div style="display: flex;justify-content: flex-end;">
+                <button><a href="../Cart/index.html" style="text-decoration: none;color: white">Add to Cart</a></button>
+            </div>
         </div>
     </section>
+
+
+</main>
+<footer>
     <div class="footer-content-white">
         <div class="contact-info">
             <h3>Need Help?</h3>
@@ -125,5 +136,6 @@
     </div>
 </footer>
 <script src="script.js"></script>
+<script src="../../js/nav.script.js"></script>
 </body>
 </html>

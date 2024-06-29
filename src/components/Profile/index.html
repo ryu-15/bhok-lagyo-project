@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Profile</title>
+    <link rel="stylesheet" href="../../styles/profile-styles.css">
+</head>
+<body>
+<div class="profile-container">
+    <div class="inner-sidebar">
+        <h2>Profile Menu</h2>
+        <ul>
+            <li><button class="inner-sidebar-btn" onclick="showSection('profileSection')">Profile</button></li>
+            <li><button class="inner-sidebar-btn" onclick="showSection('settingsSection')">Settings</button></li>
+            <li><button class="inner-sidebar-btn" onclick="showSection('orderSection')">Orders</button></li>
+            <li><button class="inner-sidebar-btn" onclick="logout()">Logout</button></li>
+        </ul>
+    </div>
+    <div class="content">
+        <a class="logo-container" href="../Landing/index.html">
+            <img src="../../img/component-img/bhoklagyoLogo.jpg" class="logo" alt="logo">
+        </a>
+        <div id="profileSection" class="section">
+            <div class="profile-header">
+                <img src="../../img/clientImg/client1.jpeg" alt="Logo" class="client-img">
+                <h1>John Doe</h1>
+                <p>johndoe@example.com</p>
+                <p>+977 9876543210</p>
+            </div>
+        </div>
+        <div id="settingsSection" class="section" style="display: none;">
+            <h2>Edit Profile</h2>
+            <form id="editProfileForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="John Doe">
+                <label for="phone">Phone number:</label>
+                <input type="text" id="phone" name="phone" value="+977 9876543210">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="johndoe@example.com">
+                <div class="btn-container"><button type="submit" class="btn">Save</button></div>
+            </form>
+        </div>
+        <div id="orderSection" class="section" style="display: none;">
+            <h2>Order History:</h2>
+            <ol id="orderHistoryList">
+                <li class="order-details">
+                    <p>Restaurant Name:<strong>Anig's kitchen</strong> </p>
+                    <p>Contact:<strong>09876345</strong> </p>
+                    <p>Delivery Location:<strong>lakeside, pkr</strong> </p>
+                    <p>Delivery Driver Name:<strong>Ram</strong> </p>
+                    <p>Status:<strong>Cooking</strong> </p>
+                    <div class="order-items">
+                        <p>1 x Burger = 300.00</p>
+                        <p>2 x Pizza = 420.00</p>
+                    </div>
+                    <p>Total: 720.00</p>
+                </li>
+                <li class="order-details">
+                    <p>Restaurant Name:<strong>Anig's kitchen</strong> </p>
+                    <p>Contact:<strong>09876345</strong> </p>
+                    <p>Delivery Location:<strong>lakeside, pkr</strong> </p>
+                    <p>Delivery Driver Name:<strong>Ram</strong> </p>
+                    <p>Status:<strong>Cooking</strong> </p>
+                    <div class="order-items">
+                        <p>1 x Burger = 300.00</p>
+                        <p>2 x Pizza = 420.00</p>
+                    </div>
+                    <p>Total: 720.00</p>
+                </li>
+                <li class="order-details">
+                    <p>Restaurant Name:<strong>Anig's kitchen</strong> </p>
+                    <p>Contact:<strong>09876345</strong> </p>
+                    <p>Delivery Location:<strong>lakeside, pkr</strong> </p>
+                    <p>Delivery Driver Name:<strong>Ram</strong> </p>
+                    <p>Status:<strong>Cooking</strong> </p>
+                    <div class="order-items">
+                        <p>1 x Burger = 300.00</p>
+                        <p>2 x Pizza = 420.00</p>
+                    </div>
+                    <p>Total: 720.00</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div id="overlay" class="overlay"></div>
+<script src="../../js/profileModal.script.js"></script>
+</body>
+</html>

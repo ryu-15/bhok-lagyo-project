@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.menu-management-container {
+    margin: 100px auto;
+    width: 80%;
+    background-color: #2E3B4E;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.menu-management-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FF7527;
+}
+.button-container{
+    background: white; display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 1%;
+    border-radius: 10px;
+}
+.add-item-button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #FF7527;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-item-button:hover {
+    background-color: #e06b23;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.menu-table th, .menu-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-table th {
+    background-color: #3A4C63;
+}
+
+.menu-table td {
+    background-color: #2E3B4E;
+}
+
+.menu-table img {
+    width: 50px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.menu-table button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.menu-table .edit {
+    background-color: #FF7527;
+    color: white;
+}
+
+.menu-table .edit:hover {
+    background-color: #e06b23;
+}
+
+.menu-table .delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.menu-table .delete:hover {
+    background-color: #c0392b;
+}

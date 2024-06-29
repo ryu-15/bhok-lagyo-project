@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Menu Items</title>
+
+    <link rel="stylesheet" href="../Add-Menu-Item/styles.css">
+    <link rel="stylesheet" href="../../styles/nav-styles.css">
+    <link rel="stylesheet" href="../../styles/footer-styles.css">
+    <link rel="icon" href="../../img/component-img/foodDelivery.jpg" sizes="any">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <a href="../../components/login/index.html"><img src="../../img/component-img/logo.png" alt="Logo"></a>
+        </div>
+        <div class="toggle-button" id="navbar-toggle">&#9776;</div>
+        <ul class="menu" id="navbar-links">
+            <li><a href="../Order-History/index.html">Orders</a></li>
+            <li><a href="../Menu-List/index.html">Menu List</a></li>
+            <li><a href="../Delivery-List/">Delivery</a></li>
+            <li><a href="#">Setting</a></li>
+            <li><a href="../Landing/index.html">Signout</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <h1>Edit Menu Items</h1>
+        <form id="menuForm" >
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required>
+
+            <label for="itemDescription">Description:</label>
+            <textarea id="itemDescription" name="itemDescription" rows="4" required></textarea>
+
+            <label for="itemPrice">Price:</label>
+            <input type="number" id="itemPrice" name="itemPrice" min="0.01" step="0.01" required>
+
+            <label for="itemImage">Image:</label>
+            <input type="file" id="itemImage" name="itemImage" accept="image/*" required>
+
+            <button type="submit">Update Item</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <div class="footer-content-white" style="background:  #FF7527">
+        <div class="contact-info">
+            <h3>Need Help?</h3>
+            <p>📞 +977 9846098780</p>
+            <p>📧 Bhoklagyo@gmail.com</p>
+        </div>
+        <div class="about-info">
+            <h3>About us</h3>
+            <p>Contact us</p>
+            <p>Privacy policy</p>
+        </div>
+    </div>
+    <div class="footer-content-white">
+        <div class="social-links">
+            <p>© Bhok Lagyo</p>
+            <p>Follow us:</p>
+            <span>
+                <img src="../../img/social-icon-img/instagramLogo.jpg" alt="Instagram">
+                <img src="../../img/social-icon-img/facebookLogo.jpg" alt="facebook">
+            </span>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <p>Powered by: UMA Team</p>
+    </div>
+</footer>
+<script src="../../js/nav.script.js"></script>
+</body>
+</html>
